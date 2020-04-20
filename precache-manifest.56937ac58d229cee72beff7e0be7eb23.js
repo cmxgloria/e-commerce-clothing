@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "52c6343ea54f286b358db88dd58cfa8f",
+    "revision": "e21e026043c402d799f7234fa43e7bf6",
     "url": "/e-commerce-clothing/index.html"
   },
   {
-    "revision": "f3b4746e52d179dce779",
+    "revision": "2f12722927a2ab659b28",
     "url": "/e-commerce-clothing/static/css/main.d7cd3f05.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/e-commerce-clothing/static/js/2.4a85e299.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f3b4746e52d179dce779",
-    "url": "/e-commerce-clothing/static/js/main.2bdb3ac0.chunk.js"
+    "revision": "2f12722927a2ab659b28",
+    "url": "/e-commerce-clothing/static/js/main.34ca49c8.chunk.js"
   },
   {
     "revision": "e7d402e8f77a32e9474b",
