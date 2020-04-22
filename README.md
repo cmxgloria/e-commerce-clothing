@@ -8,6 +8,7 @@ https://cmxgloria.github.io/e-commerce-clothing/
 
 npm install firebase
 firebase to get auth
+use google auth to sign in and sign out
 
 ## Available Scripts
 
