@@ -4,6 +4,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 https://cmxgloria.github.io/e-commerce-clothing/
 
+## firebase for sign in with google
+
+npm install firebase
+firebase to get auth
+
 ## Available Scripts
 
 In the project directory, you can run:

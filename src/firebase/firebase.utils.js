@@ -1,16 +1,24 @@
-// import firebase from "firebase/app";
-// import "firebase/firestore";
-// import "firebase/auth";
+import firebase from "firebase/app";
+import "firebase/firestore";
+import "firebase/auth";
 
-// const config = {
-//   api: "",
-// };
-// firebase.initializeApp(config);
+const config = {
+  apiKey: "AIzaSyCRbAiT9WtYondHN_pCYlOvcu6Ycda0XZM",
+  authDomain: "e-commerce-clothing-df96d.firebaseapp.com",
+  databaseURL: "https://e-commerce-clothing-df96d.firebaseio.com",
+  projectId: "e-commerce-clothing-df96d",
+  storageBucket: "e-commerce-clothing-df96d.appspot.com",
+  messagingSenderId: "318197578060",
+  appId: "1:318197578060:web:70762abe28e16e514677e9",
+  measurementId: "G-ZE3VNS03KV",
+};
+firebase.initializeApp(config);
 
-// export const auth = firebase.auth();
-// export const firestore = firebase.firestore();
-// const provider = new firebase.auth.GoogleAuthProvider();
-// provider.setCustomParameters({ prompt: "select_account" });
-// export const signInWithGoogle = () => auth.signInWithPopup(provider);
-// export default firebase;
-// https://firebase.google.com/docs/auth
+export const auth = firebase.auth();
+export const firestore = firebase.firestore();
+// this give provider auth libaray
+const provider = new firebase.auth.GoogleAuthProvider();
+// always trigger google pop up whenever we use this auth google provider to sign in
+provider.setCustomParameters({ prompt: "select_account" });
+export const signInWithGoogle = () => auth.signInWithPopup(provider);
+export default firebase;
