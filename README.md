@@ -10,6 +10,11 @@ npm install firebase
 firebase to get auth
 use google auth to sign in and sign out
 
+### database
+
+create database in Firestore(test mode)
+start a collection
+
 ## Available Scripts
 
 In the project directory, you can run:
