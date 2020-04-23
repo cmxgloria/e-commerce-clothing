@@ -18,6 +18,8 @@ start a collection
 store user ID in the database
 firestore always return 2 objects:references and snapshots(can be collection or document)
 
+change the expire data in database;
+
 ## Available Scripts
 
 In the project directory, you can run:
