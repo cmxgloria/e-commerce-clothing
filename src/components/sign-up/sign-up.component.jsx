@@ -15,15 +15,15 @@ class SignUp extends React.Component {
       displayName: "",
       email: "",
       password: "",
-      confirmePassword: "",
+      confirmPassword: "",
     };
   }
 
   handleSubmit = async (event) => {
     event.preventDefault();
 
-    const { displayName, email, password, confirmePassword } = this.state;
-    if (password !== confirmePassword) {
+    const { displayName, email, password, confirmPassword } = this.state;
+    if (password !== confirmPassword) {
       alert("passwords don't match");
       return;
     }
@@ -32,12 +32,12 @@ class SignUp extends React.Component {
         email,
         password
       );
-      createUserProfileDocument(user, { displayName });
+      await createUserProfileDocument(user, { displayName });
       this.setState({
         displayName: "",
         email: "",
         password: "",
-        confirmePassword: "",
+        confirmPassword: "",
       });
     } catch (error) {
       console.error(error);
@@ -49,7 +49,7 @@ class SignUp extends React.Component {
     this.setState({ [name]: value });
   };
   render() {
-    const { displayName, email, password, confirmePassword } = this.state;
+    const { displayName, email, password, confirmPassword } = this.state;
     return (
       <div className="sign-up">
         <h2 className="title">I do not have an account</h2>
@@ -84,13 +84,13 @@ class SignUp extends React.Component {
 
           <FormInput
             type="password"
-            name="confrimPassword"
-            value={confirmePassword}
+            name="confirmPassword"
+            value={confirmPassword}
             onChange={this.handleChange}
             label="Confirm Password"
             required
           />
-          <CustomButton type="submit">Sign Up</CustomButton>
+          <CustomButton type="submit">SIGN UP</CustomButton>
         </form>
       </div>
     );
