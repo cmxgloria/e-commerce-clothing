@@ -6,7 +6,7 @@ import { Switch, Route } from "react-router-dom";
 import Header from "./components/header/header.component";
 import SignInAndSignUpPage from "./pages/sign-in-and-sign-out/sign-in-and-sign-out.component";
 import Contact from "./pages/contact/contact.component";
-import { auth } from "./firebase/firebase.utils";
+import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 
 class App extends React.Component {
   constructor(props) {
@@ -20,11 +20,14 @@ class App extends React.Component {
 
   componentDidMount() {
     // open subscribe when user sign in
-    this.unsubscribeFromAuth = auth.onAuthStateChanged((user) => {
-      this.setState({
-        currentUser: user,
-      });
-      // console.log(user);
+    // this.unsubscribeFromAuth = auth.onAuthStateChanged((user) => {
+    //   this.setState({
+    //     currentUser: user,
+    //   });
+    //   // console.log(user);
+    // });
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async (user) => {
+      createUserProfileDocument(user);
     });
   }
 

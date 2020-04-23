@@ -15,6 +15,9 @@ use google auth to sign in and sign out
 create database in Firestore(test mode)
 start a collection
 
+store user ID in the database
+firestore always return 2 objects:references and snapshots(can be collection or document)
+
 ## Available Scripts
 
 In the project directory, you can run:
