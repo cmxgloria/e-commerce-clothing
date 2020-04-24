@@ -20,6 +20,10 @@ firestore always return 2 objects:references and snapshots(can be collection or 
 
 change the expire data in database;
 
+## Redux
+
+good for manage lots of state
+
 ## Available Scripts
 
 In the project directory, you can run:
