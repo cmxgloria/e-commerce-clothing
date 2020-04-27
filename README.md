@@ -23,6 +23,8 @@ change the expire data in database;
 ## Redux
 
 good for manage lots of state
+useful sharing date between components
+predictable state management using 3 priciples
 
 ## Available Scripts
 
