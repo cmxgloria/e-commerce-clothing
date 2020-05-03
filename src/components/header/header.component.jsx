@@ -4,6 +4,7 @@ import { auth } from "../../firebase/firebase.utils";
 // connect for react to connect to redux
 import { connect } from "react-redux";
 import "./header.styles.scss";
+import CartIcon from "../cart-icon/cart-icon.component";
 
 const Header = ({ currentUser }) => (
   <div className="header">
@@ -30,6 +31,7 @@ const Header = ({ currentUser }) => (
         </Link>
       )}
     </div>
+    <CartIcon />
   </div>
 );
 const mapStateToProps = (state) => ({
