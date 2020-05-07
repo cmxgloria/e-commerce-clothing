@@ -26,6 +26,8 @@ good for manage lots of state
 useful sharing date between components
 predictable state management using 3 priciples
 
+### npm add reselect
+
 ## Available Scripts
 
 In the project directory, you can run:
