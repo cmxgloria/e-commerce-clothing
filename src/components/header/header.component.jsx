@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { auth } from "../../firebase/firebase.utils";
 // connect for react to connect to redux
 import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
+import { selectCartHidden } from "../../redux/cart/cart.selectors";
+import { selectCurrentUser } from "../../redux/user/user.selectors";
 import "./header.styles.scss";
 import CartIcon from "../cart-icon/cart-icon.component";
 import CartDropdown from "../cart-dropdown/cart-dropdown.component";
@@ -36,9 +39,22 @@ const Header = ({ currentUser, hidden }) => (
     {hidden ? null : <CartDropdown />}
   </div>
 );
-const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
-  // currentUser: state.user.currentUser, also as above no more state as parameter
-  currentUser,
-  hidden,
+// const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
+//   // currentUser: state.user.currentUser, also as above no more state as parameter
+//   currentUser,
+//   hidden,
+// });
+
+//  another way: connect with user.selector and cart.selector from redux folder
+// const mapStateToProps = (state) => ({
+//   currentUser: selectCurrentUser(state),
+//   hidden: selectCartHidden(state),
+// });
+
+// using createStructuredSelector automatically pass top level state,can get map stare props to each subsequent selector
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser,
+  hidden: selectCartHidden,
 });
+
 export default connect(mapStateToProps)(Header);
