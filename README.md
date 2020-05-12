@@ -28,6 +28,27 @@ predictable state management using 3 priciples
 
 ### npm add reselect
 
+```
+createStructuredSelector
+```
+
+## local storage and session
+
+how to advoid state or cart items gone after refresh, one way to use redux persist
+window.sessionStorage.getItem/or setItem is to store something in the browser
+
+```
+const myObjectToStore = {name: "gloria"}
+window.sessionStorage.setItem("myItem", JSON.stringify(myObjectToStore))
+window.sessionStorage.getItem("myItem")
+"{"name":"gloria"}"
+const myRetrieveObject = window.localStorage.getItem("myItem")
+JSON.parse(myRetrieveObject)
+{name: "gloria"}
+```
+
+## redux persist
+
 ## Available Scripts
 
 In the project directory, you can run:
