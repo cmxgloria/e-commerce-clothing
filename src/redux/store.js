@@ -1,9 +1,13 @@
 import { createStore, applyMiddleware } from "redux";
+// persistStore allow app cache our store
+import { persistStore } from "redux-persist";
 import logger from "redux-logger";
 import rootReducer from "./root-reducer";
 
 const middlewares = [logger];
 // ...middlewares is spread, more scable to add more value in the [logger] array in future
-const store = createStore(rootReducer, applyMiddleware(...middlewares));
+export const store = createStore(rootReducer, applyMiddleware(...middlewares));
 
-export default store;
+export const persistor = persistStore(store);
+
+export default { store, persistor };

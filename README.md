@@ -49,6 +49,8 @@ JSON.parse(myRetrieveObject)
 
 ## redux persist
 
+npm add redux-persist
+
 ## Available Scripts
 
 In the project directory, you can run:
