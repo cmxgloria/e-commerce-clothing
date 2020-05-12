@@ -6,7 +6,7 @@ import { store, persistor } from "./redux/store";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-// use this for multiple different platforms
+// use this for multiple different platforms; with this one,cartItems stills on app even if refresh; it leverages localStorage
 import { PersistGate } from "redux-persist/integration/react";
 
 ReactDOM.render(
