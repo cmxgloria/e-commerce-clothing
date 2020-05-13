@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/e-commerce-clothing/static/css/main.e213c579.chunk.css",
-    "main.js": "/e-commerce-clothing/static/js/main.dbe4be73.chunk.js",
-    "main.js.map": "/e-commerce-clothing/static/js/main.dbe4be73.chunk.js.map",
+    "main.js": "/e-commerce-clothing/static/js/main.1405d17d.chunk.js",
+    "main.js.map": "/e-commerce-clothing/static/js/main.1405d17d.chunk.js.map",
     "runtime-main.js": "/e-commerce-clothing/static/js/runtime-main.5467502c.js",
     "runtime-main.js.map": "/e-commerce-clothing/static/js/runtime-main.5467502c.js.map",
-    "static/js/2.af8b6cbf.chunk.js": "/e-commerce-clothing/static/js/2.af8b6cbf.chunk.js",
-    "static/js/2.af8b6cbf.chunk.js.map": "/e-commerce-clothing/static/js/2.af8b6cbf.chunk.js.map",
+    "static/js/2.9e3b49f6.chunk.js": "/e-commerce-clothing/static/js/2.9e3b49f6.chunk.js",
+    "static/js/2.9e3b49f6.chunk.js.map": "/e-commerce-clothing/static/js/2.9e3b49f6.chunk.js.map",
     "index.html": "/e-commerce-clothing/index.html",
-    "precache-manifest.211944f2b21885f5b7946c593302e8b5.js": "/e-commerce-clothing/precache-manifest.211944f2b21885f5b7946c593302e8b5.js",
+    "precache-manifest.1ff984363febfc6337d88f6d9e2148d6.js": "/e-commerce-clothing/precache-manifest.1ff984363febfc6337d88f6d9e2148d6.js",
     "service-worker.js": "/e-commerce-clothing/service-worker.js",
     "static/css/main.e213c579.chunk.css.map": "/e-commerce-clothing/static/css/main.e213c579.chunk.css.map",
-    "static/js/2.af8b6cbf.chunk.js.LICENSE.txt": "/e-commerce-clothing/static/js/2.af8b6cbf.chunk.js.LICENSE.txt"
+    "static/js/2.9e3b49f6.chunk.js.LICENSE.txt": "/e-commerce-clothing/static/js/2.9e3b49f6.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.5467502c.js",
-    "static/js/2.af8b6cbf.chunk.js",
+    "static/js/2.9e3b49f6.chunk.js",
     "static/css/main.e213c579.chunk.css",
-    "static/js/main.dbe4be73.chunk.js"
+    "static/js/main.1405d17d.chunk.js"
   ]
 }
