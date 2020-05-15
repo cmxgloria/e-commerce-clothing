@@ -20,6 +20,7 @@ const ShopPage = ({ match }) => (
   </div>
 );
 
+// move to collectionsOverview component
 // const mapStateToProps = createStructuredSelector({
 //   collections: selectCollections
 // })
