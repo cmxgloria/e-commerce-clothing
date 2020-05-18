@@ -51,6 +51,10 @@ JSON.parse(myRetrieveObject)
 
 npm add redux-persist
 
+## nested route in shop component
+
+use match as props
+
 ## Available Scripts
 
 In the project directory, you can run:
