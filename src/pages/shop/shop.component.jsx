@@ -2,7 +2,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import ColletctionOverview from "../../components/collections-overview/collections-overview.component";
-import CategoryPage from "../category/category.component";
+import CollectionPage from "../collection/collection.component";
 // import { createStructuredSelector } from "reselect";
 
 // import { connect } from "react-redux";
@@ -16,7 +16,7 @@ const ShopPage = ({ match }) => (
       <CollectionPreview key={id} {...otherCollectionProps} />
     ))} */}
     <Route exact path={`${match.path}`} component={ColletctionOverview} />
-    <Route path={`${match.path}/:categoryId`} component={CategoryPage} />
+    <Route path={`${match.path}/:collectionId`} component={CollectionPage} />
   </div>
 );
 
