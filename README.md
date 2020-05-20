@@ -63,6 +63,10 @@ what change when state change
 
 ## introduction stripe
 
+https://stripe.com/au
+signup and get api key
+in terminal- yarn/npm add react-stripe-checkout
+
 ## Available Scripts
 
 In the project directory, you can run:
