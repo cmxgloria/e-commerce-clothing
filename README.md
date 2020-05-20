@@ -55,6 +55,14 @@ npm add redux-persist
 
 use match as props
 
+## data flow
+
+decide components
+decide state and know where they live
+what change when state change
+
+## introduction stripe
+
 ## Available Scripts
 
 In the project directory, you can run:
