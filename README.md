@@ -67,6 +67,12 @@ https://stripe.com/au
 signup and get api key
 in terminal- yarn/npm add react-stripe-checkout
 
+## heroku to deploy
+
+heroku --version
+heroku login
+heroku create e-frenzy-clothing --buildpack https://github.com/mars/create-react-app-buildpack.git
+
 ## Available Scripts
 
 In the project directory, you can run:
