@@ -72,6 +72,7 @@ in terminal- yarn/npm add react-stripe-checkout
 heroku --version
 heroku login
 heroku create e-frenzy-clothing --buildpack https://github.com/mars/create-react-app-buildpack.git
+https://e-frenzy-clothing.herokuapp.com/
 
 ## Available Scripts
 
