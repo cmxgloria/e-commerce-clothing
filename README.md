@@ -73,6 +73,7 @@ heroku --version
 heroku login
 heroku create e-frenzy-clothing --buildpack https://github.com/mars/create-react-app-buildpack.git
 https://e-frenzy-clothing.herokuapp.com/
+update store.js
 
 ## Available Scripts
 
