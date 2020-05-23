@@ -75,6 +75,12 @@ heroku create e-frenzy-clothing --buildpack https://github.com/mars/create-react
 https://e-frenzy-clothing.herokuapp.com/
 update store.js
 
+## naming
+
+http://getbem.com/naming/
+
+## styled-component
+
 ## Available Scripts
 
 In the project directory, you can run:
