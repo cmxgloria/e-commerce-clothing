@@ -3,7 +3,7 @@ import { createStore, applyMiddleware } from "redux";
 import { persistStore } from "redux-persist";
 import logger from "redux-logger";
 import rootReducer from "./root-reducer";
-import { composeWithDevTools } from "redux-devtools-extension";
+// import { composeWithDevTools } from "redux-devtools-extension";
 
 // const middlewares = [logger];
 
@@ -14,10 +14,7 @@ if (process.env.NODE_ENV === "development") {
 }
 
 // ...middlewares is spread, more scable to add more value in the [logger] array in future
-export const store = createStore(
-  rootReducer,
-  composeWithDevTools(applyMiddleware(...middlewares))
-);
+export const store = createStore(rootReducer, applyMiddleware(...middlewares));
 
 export const persistor = persistStore(store);
 
