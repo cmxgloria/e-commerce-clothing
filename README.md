@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## URL
 
-https://cmxgloria.github.io/e-commerce-clothing/
+https://e-frenzy-clothing.herokuapp.com/
 
 ## firebase for sign in with google
 
@@ -74,6 +74,7 @@ heroku login
 heroku create e-frenzy-clothing --buildpack https://github.com/mars/create-react-app-buildpack.git
 https://e-frenzy-clothing.herokuapp.com/
 update store.js
+another url: https://cmxgloria.github.io/e-commerce-clothing/
 
 ## naming
 
