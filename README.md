@@ -6,9 +6,20 @@ https://e-frenzy-clothing.herokuapp.com/
 
 ## firebase for sign in with google
 
+```
 npm install firebase
 firebase to get auth
 use google auth to sign in and sign out
+```
+
+### QueryReference and QuerySnapshot
+
+```
+query is request we make firestore which gives us something from database
+firestore returns us two objects: references and snapshots
+documentReference(perform CRUD, it return documentSnapshot ) vs collectionReference(get snapshot from collectionReference, it returns querySnapshot)
+
+```
 
 ### database
 
