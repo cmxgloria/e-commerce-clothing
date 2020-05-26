@@ -10,13 +10,13 @@ import CheckoutPage from "./pages/checkout/checkout.component";
 import {
   auth,
   createUserProfileDocument,
-  addCollectionAndDocuments,
+  // addCollectionAndDocuments,
 } from "./firebase/firebase.utils";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import { setCurrentUser } from "./redux/user/user.actions";
 import { selectCurrentUser } from "./redux/user/user.selectors";
-import { selectCollectionsForPreview } from "./redux/shop/shop.selectors";
+// import { selectCollectionsForPreview } from "./redux/shop/shop.selectors";
 class App extends React.Component {
   // no need below after using mapDispatchToProps from redux
   // constructor(props) {
@@ -37,8 +37,8 @@ class App extends React.Component {
     //   // console.log(user);
     // });
 
-    const { setCurrentUser, collectionsArray } = this.props;
-
+    // const { setCurrentUser, collectionsArray } = this.props; this to remove after fire in database, since compDidMount render once
+    const { setCurrentUser } = this.props;
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
       // createUserProfileDocument(user);
       if (userAuth) {
@@ -53,7 +53,11 @@ class App extends React.Component {
       }
       setCurrentUser(userAuth);
       // add collections in firebase
-      addCollectionAndDocuments("collections", collectionsArray);
+      // addCollectionAndDocuments(
+      //   "collections",
+      //   // loop through collectionsArray to show data in firebase
+      //   collectionsArray.map(({ title, items }) => ({ title, items }))
+      // );
     });
   }
 
@@ -92,7 +96,7 @@ class App extends React.Component {
 
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
-  collectionsArray: selectCollectionsForPreview,
+  // collectionsArray: selectCollectionsForPreview,
 });
 // deal with sign out with redux
 const mapDispatchToProps = (dispatch) => ({
