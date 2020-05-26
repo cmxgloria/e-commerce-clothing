@@ -1,6 +1,8 @@
 // ShopPage becomes not connected-component; it becomes a child component of ShopPage
 import React from "react";
 import { Route } from "react-router-dom";
+import { connect } from "react-redux";
+
 import ColletctionOverview from "../../components/collections-overview/collections-overview.component";
 import CollectionPage from "../collection/collection.component";
 import {
@@ -13,15 +15,16 @@ import {
 // import { createStructuredSelector } from "reselect";
 // import CollectionPreview from "../../components/collection-preview/collection-preview.component";
 // import { selectCollections } from "../../redux/shop/shop.selectors";
-
+import { updateCollections } from "../../redux/shop/shop.actions.js";
 class ShopPage extends React.Component {
   unsubscribeFromSnapshot = null;
 
   componentDidMount() {
+    const { updateCollections } = this.props;
     const collectionRef = firestore.collection("collections");
     collectionRef.onSnapshot(async (snapshot) => {
       const collectionsMap = convertCollectionsSnapshotToMap(snapshot);
-      console.log(collectionsMap);
+      updateCollections(collectionsMap);
     });
   }
   render() {
@@ -46,4 +49,9 @@ class ShopPage extends React.Component {
 //   collections: selectCollections
 // })
 // export default connect(mapStateToProps)(ShopPage);
-export default ShopPage;
+
+const mapDispatchToProps = (dispatch) => ({
+  updateCollections: (collectionsMap) =>
+    dispatch(updateCollections(collectionsMap)),
+});
+export default connect(null, mapDispatchToProps)(ShopPage);
