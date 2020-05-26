@@ -3,7 +3,10 @@ import React from "react";
 import { Route } from "react-router-dom";
 import ColletctionOverview from "../../components/collections-overview/collections-overview.component";
 import CollectionPage from "../collection/collection.component";
-import { firestore } from "../../firebase/firebase.utils";
+import {
+  firestore,
+  convertCollectionsSnapshotToMap,
+} from "../../firebase/firebase.utils";
 // import { createStructuredSelector } from "reselect";
 
 // import { connect } from "react-redux";
@@ -17,7 +20,7 @@ class ShopPage extends React.Component {
   componentDidMount() {
     const collectionRef = firestore.collection("collections");
     collectionRef.onSnapshot(async (snapshot) => {
-      console.log(snapshot);
+      convertCollectionsSnapshotToMap(snapshot);
     });
   }
   render() {
