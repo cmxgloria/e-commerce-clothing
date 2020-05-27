@@ -93,6 +93,8 @@ http://getbem.com/naming/
 
 ## styled-component
 
+## animation and styled-component
+
 ## Available Scripts
 
 In the project directory, you can run:
