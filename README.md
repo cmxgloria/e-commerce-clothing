@@ -95,6 +95,10 @@ http://getbem.com/naming/
 
 ## animation and styled-component
 
+```
+deleted shop data from frontend, get the data from database in firebase, updated shop.selector
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
