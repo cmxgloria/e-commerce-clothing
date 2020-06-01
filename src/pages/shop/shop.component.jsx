@@ -16,7 +16,16 @@ import {
 // import CollectionPreview from "../../components/collection-preview/collection-preview.component";
 // import { selectCollections } from "../../redux/shop/shop.selectors";
 import { updateCollections } from "../../redux/shop/shop.actions.js";
+import { WithSpinner } from "../../components/with-spinner";
+
+const CollectionsOverviewWithSpinner = WithSpinner(ColletctionOverview);
+const CollectionPageWithSpinner = WithSpinner(CollectionPage);
+
 class ShopPage extends React.Component {
+  state = {
+    loading: true,
+  };
+
   unsubscribeFromSnapshot = null;
 
   componentDidMount() {
@@ -25,19 +34,31 @@ class ShopPage extends React.Component {
     collectionRef.onSnapshot(async (snapshot) => {
       const collectionsMap = convertCollectionsSnapshotToMap(snapshot);
       updateCollections(collectionsMap);
+      this.setState({ loading: false });
     });
   }
   render() {
+    const { loading } = this.state;
     const { match } = this.props;
     return (
       <div className="shop-page">
         {/* {collections.map(({ id, ...otherCollectionProps }) => (
       <CollectionPreview key={id} {...otherCollectionProps} />
     ))} */}
-        <Route exact path={`${match.path}`} component={ColletctionOverview} />
+        {/* <Route exact path={`${match.path}`} component={ColletctionOverview} /> */}
+        <Route
+          exact
+          path={`${match.path}`}
+          render={(props) => (
+            <CollectionsOverviewWithSpinner isLoading={loading} {...props} />
+          )}
+        />
         <Route
           path={`${match.path}/:collectionId`}
-          component={CollectionPage}
+          // component={CollectionPage}
+          render={(props) => (
+            <CollectionPageWithSpinner isLoading={loading} {...props} />
+          )}
         />
       </div>
     );
