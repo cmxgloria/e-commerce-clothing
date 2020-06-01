@@ -16,7 +16,7 @@ import {
 // import CollectionPreview from "../../components/collection-preview/collection-preview.component";
 // import { selectCollections } from "../../redux/shop/shop.selectors";
 import { updateCollections } from "../../redux/shop/shop.actions.js";
-import { WithSpinner } from "../../components/with-spinner";
+import WithSpinner from "../../components/with-spinner/with-spinner.component";
 
 const CollectionsOverviewWithSpinner = WithSpinner(ColletctionOverview);
 const CollectionPageWithSpinner = WithSpinner(CollectionPage);
