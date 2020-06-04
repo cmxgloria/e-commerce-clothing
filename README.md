@@ -99,6 +99,8 @@ http://getbem.com/naming/
 deleted shop data from frontend, get the data from database in firebase, updated shop.selector
 ```
 
+## debugging
+
 ## Available Scripts
 
 In the project directory, you can run:
