@@ -33,6 +33,8 @@ change the expire data in database;
 
 ## Redux
 
+https://react-redux.js.org/api/connect
+
 good for manage lots of state
 useful sharing date between components
 predictable state management using 3 priciples
